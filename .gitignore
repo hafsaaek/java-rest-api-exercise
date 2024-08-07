@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### VS Local Configuration ###
-local.properties
+src/main/resources/local.properties
