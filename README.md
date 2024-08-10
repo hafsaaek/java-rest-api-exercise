@@ -96,6 +96,7 @@ If successful, you should see output that ends similarly to the below
 2024-04-12T11:49:59.055-04:00  INFO 39975 --- [REST API Exercise] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
 2024-04-12T11:49:59.059-04:00  INFO 39975 --- [REST API Exercise] [           main] c.c.r.RestApiExerciseApplication         : Started RestApiExerciseApplication in 1.493 seconds (process running for 1.638)
 ```
+- http://localhost:8080/ - URL for where the application is running
 
 ### Stop Application
 Stop the application by pressing `Ctrl + C`
