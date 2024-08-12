@@ -1,0 +1,196 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.cbfacademy:restapiexercise >-------------------
+[INFO] Building REST API Exercise 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ restapiexercise ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ restapiexercise ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ restapiexercise ---
+[INFO] skip non existing resourceDirectory /Users/hafsaelmi/Desktop/ETT/Spring Boot API /java-rest-api-exercise/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ restapiexercise ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ restapiexercise ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.cbfacademy.restapiexercise.ious.IOUControllerTest
+15:27:21.803 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-12T15:27:23.624+01:00  INFO 2685 --- [REST API Exercise] [           main] c.c.r.ious.IOUControllerTest             : Starting IOUControllerTest using Java 21.0.3 with PID 2685 (started by hafsaelmi in /Users/hafsaelmi/Desktop/ETT/Spring Boot API /java-rest-api-exercise)
+2024-08-12T15:27:23.628+01:00  INFO 2685 --- [REST API Exercise] [           main] c.c.r.ious.IOUControllerTest             : No active profile set, falling back to 1 default profile: "default"
+2024-08-12T15:27:26.739+01:00  INFO 2685 --- [REST API Exercise] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-12T15:27:26.918+01:00  INFO 2685 --- [REST API Exercise] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 1 JPA repository interface.
+WARNING: A Java agent has been loaded dynamically (/Users/hafsaelmi/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.18/byte-buddy-agent-1.14.18.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-08-12T15:27:34.121+01:00  INFO 2685 --- [REST API Exercise] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-12T15:27:34.164+01:00  INFO 2685 --- [REST API Exercise] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-12T15:27:34.165+01:00  INFO 2685 --- [REST API Exercise] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-12T15:27:34.460+01:00  INFO 2685 --- [REST API Exercise] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-12T15:27:34.463+01:00  INFO 2685 --- [REST API Exercise] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10698 ms
+2024-08-12T15:27:35.282+01:00  INFO 2685 --- [REST API Exercise] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-12T15:27:35.796+01:00  INFO 2685 --- [REST API Exercise] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-12T15:27:36.013+01:00  INFO 2685 --- [REST API Exercise] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-12T15:27:36.765+01:00  INFO 2685 --- [REST API Exercise] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-12T15:27:36.889+01:00  INFO 2685 --- [REST API Exercise] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-12T15:27:39.368+01:00  INFO 2685 --- [REST API Exercise] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33e4068
+2024-08-12T15:27:39.386+01:00  INFO 2685 --- [REST API Exercise] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-12T15:27:43.298+01:00  INFO 2685 --- [REST API Exercise] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-12T15:27:43.570+01:00  INFO 2685 --- [REST API Exercise] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-12T15:27:44.172+01:00  WARN 2685 --- [REST API Exercise] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Multiple @RequestMapping annotations found on public com.cbfacademy.restapiexercise.ious.IOU com.cbfacademy.restapiexercise.ious.IOUController.getIOUByID(java.util.UUID), but only the first will be used: [@org.springframework.web.bind.annotation.RequestMapping(consumes={}, headers={}, method={}, name="", params={}, path={"/api/iou"}, produces={}, value={"/api/iou"}), @org.springframework.web.bind.annotation.GetMapping(consumes={}, headers={}, name="/{id}", params={}, path={}, produces={"application/json"}, value={})]
+2024-08-12T15:27:46.566+01:00  INFO 2685 --- [REST API Exercise] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 61601 (http) with context path '/'
+2024-08-12T15:27:46.607+01:00  INFO 2685 --- [REST API Exercise] [           main] c.c.r.ious.IOUControllerTest             : Started IOUControllerTest in 24.869 seconds (process running for 30.837)
+2024-08-12T15:27:47.289+01:00  INFO 2685 --- [REST API Exercise] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-12T15:27:47.290+01:00  INFO 2685 --- [REST API Exercise] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-12T15:27:47.293+01:00  INFO 2685 --- [REST API Exercise] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-12T15:27:47.455+01:00  WARN 2685 --- [REST API Exercise] [o-auto-1-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'id' for method parameter type UUID is not present]
+[ERROR] Tests run: 8, Failures: 1, Errors: 7, Skipped: 0, Time elapsed: 28.82 s <<< FAILURE! -- in com.cbfacademy.restapiexercise.ious.IOUControllerTest
+[ERROR] com.cbfacademy.restapiexercise.ious.IOUControllerTest.getInvalidIOU -- Time elapsed: 0.210 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.getEndpoint(IOUControllerTest.java:250)
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.getInvalidIOU(IOUControllerTest.java:136)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.cbfacademy.restapiexercise.ious.IOUControllerTest.updateIOU -- Time elapsed: 0.014 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.getEndpoint(IOUControllerTest.java:250)
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.updateIOU(IOUControllerTest.java:153)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.cbfacademy.restapiexercise.ious.IOUControllerTest.deleteIOU -- Time elapsed: 0.016 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.getEndpoint(IOUControllerTest.java:250)
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.deleteIOU(IOUControllerTest.java:197)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.cbfacademy.restapiexercise.ious.IOUControllerTest.getAllIOUs -- Time elapsed: 0.935 s <<< ERROR!
+org.springframework.web.client.RestClientException: Error while extracting response for type [java.util.List<com.cbfacademy.restapiexercise.ious.IOU>] and content type [application/json]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:119)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1159)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1142)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:892)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:721)
+	at org.springframework.boot.test.web.client.TestRestTemplate.exchange(TestRestTemplate.java:823)
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.getAllIOUs(IOUControllerTest.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.ArrayList<com.cbfacademy.restapiexercise.ious.IOU>` from Object value (token `JsonToken.START_OBJECT`)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:406)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354)
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:104)
+	... 10 more
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.util.ArrayList<com.cbfacademy.restapiexercise.ious.IOU>` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1767)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1541)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1488)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.handleNonArray(CollectionDeserializer.java:402)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:254)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:30)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2125)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1501)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395)
+	... 12 more
+
+[ERROR] com.cbfacademy.restapiexercise.ious.IOUControllerTest.createIOU -- Time elapsed: 0.255 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <200 OK>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.createIOU(IOUControllerTest.java:90)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.cbfacademy.restapiexercise.ious.IOUControllerTest.deleteInvalidIOU -- Time elapsed: 0.019 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.getEndpoint(IOUControllerTest.java:250)
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.deleteInvalidIOU(IOUControllerTest.java:226)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.cbfacademy.restapiexercise.ious.IOUControllerTest.updateInvalidIOU -- Time elapsed: 0.031 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.getEndpoint(IOUControllerTest.java:250)
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.updateInvalidIOU(IOUControllerTest.java:178)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.cbfacademy.restapiexercise.ious.IOUControllerTest.getIOUById -- Time elapsed: 0.011 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.getEndpoint(IOUControllerTest.java:250)
+	at com.cbfacademy.restapiexercise.ious.IOUControllerTest.getIOUById(IOUControllerTest.java:117)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   IOUControllerTest.createIOU:90 expected: <201 CREATED> but was: <200 OK>
+[ERROR] Errors: 
+[ERROR]   IOUControllerTest.deleteIOU:197->getEndpoint:250 NullPointer Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+[ERROR]   IOUControllerTest.deleteInvalidIOU:226->getEndpoint:250 NullPointer Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+[ERROR]   IOUControllerTest.getAllIOUs:100 » RestClient Error while extracting response for type [java.util.List<com.cbfacademy.restapiexercise.ious.IOU>] and content type [application/json]
+[ERROR]   IOUControllerTest.getIOUById:117->getEndpoint:250 NullPointer Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+[ERROR]   IOUControllerTest.getInvalidIOU:136->getEndpoint:250 NullPointer Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+[ERROR]   IOUControllerTest.updateIOU:153->getEndpoint:250 NullPointer Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+[ERROR]   IOUControllerTest.updateInvalidIOU:178->getEndpoint:250 NullPointer Cannot invoke "java.util.UUID.toString()" because the return value of "com.cbfacademy.restapiexercise.ious.IOU.getId()" is null
+[INFO] 
+[ERROR] Tests run: 8, Failures: 1, Errors: 7, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  42.383 s
+[INFO] Finished at: 2024-08-12T15:27:49+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project restapiexercise: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/hafsaelmi/Desktop/ETT/Spring Boot API /java-rest-api-exercise/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
