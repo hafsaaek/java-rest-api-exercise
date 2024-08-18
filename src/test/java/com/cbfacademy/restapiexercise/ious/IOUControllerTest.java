@@ -69,14 +69,14 @@ public class IOUControllerTest {
                 .scheme("http")
                 .host("localhost")
                 .port(port)
-                .path("api/iou")
+                .path("api/ious")
                 .build()
                 .toUri();
 
         when(iouService.getAllIOUs()).thenReturn(defaultIOUs);
     }
 
-    @Test
+    @Test //works!!!!
     @Description("POST /api/ious creates new IOU")
     void createIOU() {
         // Arrange
@@ -117,7 +117,8 @@ public class IOUControllerTest {
         IOU iou = selectRandomIOU();
         URI endpoint = getEndpoint(iou);
 
-        when(iouService.getIOU(any(UUID.class))).thenReturn(iou);
+        // when(iouService.getIOU(any(UUID.class))).thenReturn(iou);
+        when(iouService.getIOU(iou.getId())).thenReturn(iou);
 
         // Act
         ResponseEntity<IOU> response = restTemplate.getForEntity(endpoint, IOU.class);
@@ -129,12 +130,12 @@ public class IOUControllerTest {
         verify(iouService).getIOU(iou.getId());
     }
 
-    @Test
+    @Test // works!!!!!
     @Description("GET /api/ious/{id} returns 404 for invalid IOU")
     void getInvalidIOU() {
         // Arrange
         IOU iou = mock(IOU.class); //
-        when(iou.getId()).thenReturn(UUID.randomUUID()); // 
+        when(iou.getId()).thenReturn(UUID.randomUUID()); //
         URI endpoint = getEndpoint(iou);
 
         when(iouService.getIOU(any(UUID.class))).thenThrow(NoSuchElementException.class);
@@ -220,7 +221,7 @@ public class IOUControllerTest {
         verify(iouService).deleteIOU(iou.getId());
     }
 
-    @Test
+    @Test // works!!
     @Description("DELETE /api/ious/{id} returns 404 for invalid IOU")
     void deleteInvalidIOU() {
         // Arrange
@@ -240,7 +241,6 @@ public class IOUControllerTest {
 
     private IOU selectRandomIOU() {
         int randomIndex = new Random().nextInt(defaultIOUs.size());
-
         return defaultIOUs.get(randomIndex);
     }
 
@@ -251,6 +251,14 @@ public class IOUControllerTest {
     private URI getEndpoint(IOU iou) {
         return appendPath(baseURI, iou.getId().toString());
     }
+
+    // private URI getEndpoint(IOU iou) {
+    // if (iou == null || iou.getId() == null) {
+    // throw new IllegalArgumentException("IOU or IOU ID cannot be null");
+    // }
+    // // Construct the URI using the ID
+    // return URI.create("/api/ious/" + iou.getId().toString());
+    // }
 
     private Instant getInstant(int hoursToSubtract) {
         // Get the current date and time in the system's default time zone
