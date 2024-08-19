@@ -33,7 +33,6 @@ public class IOUController {
     // GET /api/ious Retrieve a list of (optionally filtered) IOUs
     @GetMapping(produces = "application/json")
     public List<IOU> getListOfIOUs(
-            @RequestParam(required = false) UUID borrowerId,
             @RequestParam(required = false) String borrower,
             @RequestParam(required = false) String lender,
             @RequestParam(required = false) BigDecimal amount) {
@@ -112,15 +111,33 @@ public class IOUController {
         }
     }
 
-}
+    // Exercise 5: Create a getHighValueIOUS method in your controller, mapped to
+    // the a new /high path
+    @GetMapping(value = "/high", produces = "application/json")
+    public List<IOU> getHighValueIOUS() {
+        try {
+            return this.iouService.getHighValueIOUs();
 
-// Create an IOUController class that implements the endpoints below. Ensure
-// your service class is injected as a dependency and apply the appropriate
-// annotations
-// Start your API and confirm there are no errors
-// Method Endpoint Description
-// GET /api/ious Retrieve a list of (optionally filtered) IOUs
-// GET /api/ious/{id} Retrieve a specific IOU by its ID
-// POST /api/ious Create a new IOU
-// PUT /api/ious/{id} Update an existing IOU by ID
-// DELETE /api/ious/{id} Delete an IOU by ID
+        } catch (NoSuchElementException exception) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "IOU Not Found", exception);
+        } catch (RuntimeException exception) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
+                    "An error occurred while processing the request", exception);
+        }
+    }
+
+    // Exercise 5: Create a getLowValueIOUS method in your controller, mapped to the
+    // a new /low path
+    @GetMapping(value = "/low", produces = "application/json")
+    public List<IOU> getLowValueIOUS() {
+        try {
+            return this.iouService.getLowhValueIOUs();
+
+        } catch (NoSuchElementException exception) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "IOU Not Found", exception);
+        } catch (RuntimeException exception) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
+                    "An error occurred while processing the request", exception);
+        }
+    }
+}

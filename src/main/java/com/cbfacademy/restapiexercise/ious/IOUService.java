@@ -53,12 +53,19 @@ public class IOUService{
     public List<IOU> getIOUsByBorrower(String borrower){
         return this.iouRepository.findByBorrower(borrower);
     }
+
+    // Exercise 5: Create a new API endpoint to return IOUs with above-average value:
+        // Create a method in your repository interface called findHighValueIOUs.
+        // Define a native @Query annotation that will return all IOUs with an above average value. Hint: create a subquery using the AVG function
+        // Create a method in your service class called getHighValueIOUs.
+        // Create a getHighValueIOUS method in your controller, mapped to the /high path.
+    public List<IOU> getHighValueIOUs() {
+        return this.iouRepository.findHighValueIOUs();
+    }
+
+    //Similar for IOUs with below or ewual to averge amounts
+    public List<IOU> getLowhValueIOUs() {
+        return this.iouRepository.findLowValueIOUs();
+    }
 }
 
-// Create an IOUService class that accepts an IOURepository as a dependency and implements the following methods:
-    // List<IOU> getAllIOUs()
-    // IOU getIOU(UUID id) throws NoSuchElementException
-    // IOU createIOU(IOU iou) throws IllegalArgumentException, OptimisticLockingFailureException
-    // IOU updateIOU(UUID id, IOU updatedIOU) throws NoSuchElementException
-    // void deleteIOU(UUID id)
-// Start your API and confirm there are no errors
