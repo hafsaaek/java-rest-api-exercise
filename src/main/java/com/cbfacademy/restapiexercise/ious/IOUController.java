@@ -1,5 +1,6 @@
 package com.cbfacademy.restapiexercise.ious;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -30,9 +32,19 @@ public class IOUController {
 
     // GET /api/ious Retrieve a list of (optionally filtered) IOUs
     @GetMapping(produces = "application/json")
-    public List<IOU> getListOfIOUs() {
+    public List<IOU> getListOfIOUs(
+            @RequestParam(required = false) UUID borrowerId,
+            @RequestParam(required = false) String borrower,
+            @RequestParam(required = false) String lender,
+            @RequestParam(required = false) BigDecimal amount) {
         try {
-            return this.iouService.getAllIOUs();
+            if (borrower != null && !borrower.isEmpty()) {
+                // If borrower is provided, filter by borrower
+                return this.iouService.getIOUsByBorrower(borrower);
+            } else {
+                // Otherwise, return all IOUs
+                return this.iouService.getAllIOUs();
+            }
         } catch (NoSuchElementException exception) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "IOU not found", exception);
         } catch (RuntimeException exception) {

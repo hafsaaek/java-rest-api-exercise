@@ -26,7 +26,7 @@ public class IOU {
   }
 
   public IOU(String borrower, String lender, BigDecimal amount, Instant dateTime) {
-    this.id = UUID.randomUUID(); // Ensure the ID is set
+    this.id = UUID.randomUUID(); // Set the ID 
     this.borrower = borrower;
     this.lender = lender;
     this.amount = amount;

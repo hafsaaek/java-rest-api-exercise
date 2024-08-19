@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class IOUService {
+public class IOUService{
     public final IOURepository iouRepository;
 
     public IOUService(IOURepository iouRepository){
@@ -46,6 +46,13 @@ public class IOUService {
     public void deleteIOU(UUID id) throws NoSuchElementException{
         this.iouRepository.deleteById(id);
     }   
+
+    // Exercise 4: Create a new API endpoint to return IOUs for a specific borrower:
+        // 1. Create a method in your repository interface called findByBorrower that accepts a string borrower parameter.
+        // 2. Create a method in your service class called getIOUsByBorrower - returns IOU given a specific borrower - how? 
+    public List<IOU> getIOUsByBorrower(String borrower){
+        return this.iouRepository.findByBorrower(borrower);
+    }
 }
 
 // Create an IOUService class that accepts an IOURepository as a dependency and implements the following methods:
